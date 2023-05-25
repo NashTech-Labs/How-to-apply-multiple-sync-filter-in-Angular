@@ -1,0 +1,82 @@
+<div class="page-wrapper">
+  <div class="row m-5">
+    <div class="col-12">
+     <h3 class="bg-danger text-white p-3">360 Filter in Angular</h3>
+      <div class="filter-right-section">
+        <h6 class="fiterText">Filter By:</h6>
+        <div class="d-flex">
+        <div class="filterDiv d-flex">
+          <select #studio class="form-control cursor-pointer py-2 m-2"
+            (change)="onStudioFilter(studio.value)">
+            <option class="pb-3">All Studio</option>
+            <option *ngFor="let studio of studioList" class="pb-3">
+              {{studio}}</option>
+          </select>
+        </div>
+        <ng-container>
+        <div class="filterDiv d-flex ">
+
+                  <select #status class="form-control cursor-pointer py-2 m-2"
+                  (change)="onStatusFilter(status.value)">
+                  <option class="pb-3">All Status</option>
+                  <option>Approved</option>
+                  <option>Pending</option>
+                  <option>Rejected</option>
+                </select>
+        </div>
+        </ng-container>
+        </div>
+        <div class="d-flex">
+            <div class="filterDiv d-flex" >
+              <select #type class="form-control cursor-pointer py-2 m-2"
+                (change)="onContritypeFilter(type.value)" >
+                <option selected class="pb-3">All Type</option>
+                <option *ngFor="let type of contributionType" class="pb-3">
+                  {{type}}</option>
+              </select>
+            </div>
+      </div>
+      </div>
+        <div class="report-card card pt-4 mt-5" *ngIf="tableData.length">
+            <div class=" report-body cursor-pointer mx-2 px-3 pb-3" id="icon-grid" *ngFor="let row of tableData let i =index" >
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="col-xxl-3 col-xl-3 col-lg-3 d-flex">
+                <div>
+                  <h6 class="mb-n1">{{ row?.knolderName }}</h6>
+                  <small class="font-weight-bold">{{ row?.studioName }}</small>
+                </div>
+                </div>
+                <div class="col-xxl-5 col-xl-5 col-lg-5 d-flex">
+                  <div class="ms-md-0 ms-sm-6 contributions-title">
+                    <h6 class="mb-n1 text-truncate">{{row.title}}</h6>
+                    <small class="font-weight-bold">{{ row.contributionType.name }} </small>
+                  </div>
+
+                </div>
+                <div class="col-xxl-2 col-xl-2 col-lg-2 d-flex">
+                  <div class="ms-md-0 ms-sm-6">
+                    <h6 class="mb-n1">Date</h6>
+                    <small class="font-weight-bold">{{ row.contributionDate |date }} </small>
+                  </div>
+
+                </div>
+                <div class="col-xxl-2 col-xl-2 col-lg-2 d-flex justify-content-sm-center ">
+                    <button
+                    [ngClass]="{'pendingStatus': row.status.name === 'PENDING', 'approvedStatus' : row.status.name === 'APPROVED',
+                     'rejectedStatus' : row.status.name === 'REJECTED' }"
+                    class="btn text-white status-btn mb-0">
+                    {{row.status.name}}
+                  </button>
+                </div>
+              </div>
+                <hr/>
+            </div>
+         </div>
+    </div>
+        <div *ngIf="noReward" class="card text-center m-3 py-10">
+              <h5 class="p-4 card bg-secondary text-white">No More DATA </h5>
+            </div>
+  </div>
+</div>
+
+

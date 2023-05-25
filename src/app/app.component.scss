@@ -1,0 +1,214 @@
+
+
+.main-tab-section {
+    height: 60px;
+}
+@media only screen and (max-width:406px){
+  .modal-footer{
+    height: 132px;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .page-wrapper{
+      height: 110px;
+      margin-bottom: 1rem;
+  }
+  }
+
+
+
+
+
+  .table_header_section {
+    border-radius: 10px;
+  }
+  .heading-div{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .newTabs {
+    cursor: pointer;
+    padding: 11px 15px;
+    border-radius: 5px;
+  }
+  .filterDiv {
+    width: 170px;
+  }
+.fiterText{
+  margin-top: 15px;
+  margin-right: 17px;
+}
+
+  select:-webkit-autofill select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  select:focus {
+  color: #889BCD;
+  }
+
+  .cal-icon{
+    color: #889BCD;
+  }
+  .vl {
+    height: 52px;
+  }
+  .user-img{
+    border-radius: 50%;
+    height: 49px;
+    width: 49px;
+  }
+  .user-icon {
+    padding: 7px;
+    height: 49px;
+    width: 49px;
+    font-size: 35px;
+    border-radius: 50%;
+    color: #4D639C;
+    background-color: #D2DEF2;
+  }
+  .card-img{
+    height: 51px;
+    width: 80px;
+  }
+  .status-btn{
+    border-radius: 20px;
+    width: 134px;
+    height: 40px;
+  }
+  .pendingStatus{
+    background: #FF9900;
+  }
+  .approvedStatus{
+    background: #33D2C3;
+  }
+  .rejectedStatus{
+    background: #FF3D00;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent !important;
+
+   }
+  .report-card{
+    max-height: 800px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .show-more{
+    height: 38px;
+    min-width: 98.5%;
+    border-radius: 6px;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+  .backBtn{
+    width: 122px;
+    border-radius: 50px;
+  }
+  .back-icon {
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    font-size: 22px;
+    font-weight: bolder;
+    border-radius: 50%;
+    color: #ffff;
+    background-color: #4D639C;
+    margin-right: 42px;
+    margin-left: -10px;
+    margin-top: -2px;
+  }
+  .addTxt {
+    position: absolute;
+    top: 12px;
+    left: 55px;
+    font-size: 16px;
+  }
+  .backTab{
+    margin-top: -82px;
+  }
+
+  .select-status{
+    width: 17px;
+    height: 17px;
+    margin-top: 19px;
+  }
+
+  .buttonload {
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  .fa {
+    margin-left: -12px;
+    margin-right: 8px;
+  }
+  @media (min-width:301px) and (max-width: 600px) {
+
+    .search{
+      width: 130px;
+    }
+
+  }
+  @media (max-width: 692px) {
+    .backTab {
+      margin-top: -140px;
+    }
+    select {
+      background-position: right -11px top 10px;
+    }
+  }
+
+ .success-color{
+  background: #33D2C3;
+ }
+
+ .filter-left-section{
+   width: 25%;
+   display: flex;
+   justify-content: start;
+ }
+ .filter-right-section{
+   width: 75%;
+  display: flex;
+  justify-content: end;
+ }
+@media screen and (max-width:1425px){
+  .filter-left-section{
+    width: 100%;
+  }
+  .filter-right-section{
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 100%;
+   justify-content: start;
+  }
+  .filter-tab{
+    flex-direction: column;
+  }
+}
+.contributions-title{
+    min-width:100px;
+    max-width:500px;
+}
+@media screen and (max-width:865px){
+.filter-right-section{
+ flex-direction: column;
+ }
+}
+.btn-margin{
+  margin-left: 13px;
+}
